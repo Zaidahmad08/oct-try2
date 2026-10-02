@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#87B8D8" />
+  <title>For Surbhi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --sky:#87B8D8; --cream:#f7f7f1; --paper:#fff8e8; --sun:#f4c542; --ochre:#d99b2b; --leaf:#607a45; --ink:#263746; --serif:"Cormorant Garamond", Georgia, serif; --sans:Manrope, Inter, system-ui, sans-serif; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; background:var(--cream); }
+    body { margin:0; color:var(--ink); font-family:var(--sans); overflow-x:hidden; background:var(--cream); }
+    button { font:inherit; } .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .grain { position:fixed; inset:0; z-index:50; pointer-events:none; opacity:.11; mix-blend-mode:soft-light; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+    .hero { min-height:100svh; position:relative; display:grid; place-items:center; overflow:hidden; isolation:isolate; background:linear-gradient(180deg,#83b8dc 0%,#b8d7e0 60%,#f1d990 100%); }
+    .hero:after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,transparent 55%,rgba(255,248,232,.58) 100%); }
+    .sun { position:absolute; width:min(52vw,520px); aspect-ratio:1; border-radius:50%; top:12%; right:-12%; background:radial-gradient(circle at 43% 43%,#fffdea 0 8%,#ffe59d 36%,rgba(255,206,86,.26) 63%,transparent 70%); filter:blur(1px); opacity:.92; }
+    .cloud { position:absolute; opacity:.72; filter:blur(.3px); border-radius:50%; background:#fffdf6; width:clamp(150px,28vw,390px); height:clamp(35px,7vw,92px); box-shadow:clamp(32px,7vw,86px) clamp(-9px,-1.6vw,-18px) 0 clamp(4px,1vw,12px) #fffdf6, clamp(85px,13vw,165px) clamp(4px,1vw,12px) 0 clamp(7px,1.5vw,17px) #fffdf6, clamp(-35px,-5vw,-56px) clamp(8px,1vw,13px) 0 clamp(5px,1vw,12px) #fffdf6; animation:drift var(--speed) linear infinite alternate; }
+    .cloud.one { top:15%; left:-10%; --speed:31s; transform:scale(.68); } .cloud.two { top:32%; right:-10%; --speed:41s; transform:scale(.88); } .cloud.three { top:67%; left:5%; --speed:36s; transform:scale(.45); opacity:.43; }
+    @keyframes drift { from { translate:-4vw 0; } to { translate:11vw 1.5vw; } }
+    .birds { position:absolute; top:25%; left:15%; font-family:Arial,sans-serif; letter-spacing:9px; color:#365261; opacity:.57; font-size:clamp(10px,1.7vw,18px); transform:rotate(-8deg); animation:birds 16s ease-in-out infinite alternate; } @keyframes birds { to { translate:28vw -4vh; } }
+    .hero-copy { z-index:2; padding:4rem 1.5rem 9rem; text-align:center; max-width:730px; animation:intro 1.5s ease both; }
+    @keyframes intro { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+    .eyebrow { text-transform:uppercase; font-size:10px; letter-spacing:.24em; font-weight:600; margin:0 0 1.2rem; color:rgba(38,55,70,.72); }
+    h1 { font:400 clamp(3.05rem,9vw,7.2rem)/.88 var(--serif); letter-spacing:-.055em; margin:0 auto 2.2rem; max-width:750px; }
+    .play-intro { border:1px solid rgba(38,55,70,.45); color:var(--ink); background:rgba(255,252,240,.3); border-radius:999px; padding:13px 20px 13px 15px; display:inline-flex; align-items:center; gap:11px; cursor:pointer; letter-spacing:.03em; font-size:11px; text-transform:uppercase; transition:.35s; backdrop-filter:blur(5px); }
+    .play-intro:hover,.play-intro:focus-visible { background:var(--ink); color:var(--paper); transform:translateY(-2px); outline:0; } .disc { border:1px solid currentColor; width:25px; height:25px; border-radius:50%; display:grid; place-items:center; font-size:8px; }
+    .hero-note { position:absolute; z-index:2; bottom:24px; font-size:10px; text-transform:uppercase; letter-spacing:.18em; opacity:.68; animation:bob 2.4s ease-in-out infinite; } @keyframes bob { 50% { translate:0 5px; } }
+    .skyline { position:absolute; bottom:-2px; left:0; width:100%; height:24vh; background:linear-gradient(transparent 0 28%,rgba(96,122,69,.22) 29% 100%); clip-path:polygon(0 57%,4% 43%,8% 57%,13% 30%,17% 55%,22% 43%,26% 64%,33% 28%,38% 61%,44% 48%,51% 68%,56% 36%,61% 55%,68% 26%,74% 57%,79% 38%,84% 61%,90% 28%,95% 49%,100% 34%,100% 100%,0 100%); }
+    .music { position:fixed; bottom:18px; right:18px; z-index:60; width:48px; height:48px; color:var(--paper); background:rgba(38,55,70,.84); border:1px solid rgba(255,255,255,.35); border-radius:50%; display:grid; place-items:center; cursor:pointer; box-shadow:0 8px 30px rgba(38,55,70,.25); transition:.25s; } .music:hover { transform:scale(1.08); } .music.is-playing:after { content:""; position:absolute; inset:-6px; border:1px solid rgba(38,55,70,.55); border-radius:50%; animation:pulse 2.2s ease-out infinite; } @keyframes pulse { to { transform:scale(1.32); opacity:0; } }
+    .lyric-stage { position:relative; min-height:90svh; display:grid; place-items:center; padding:8rem 1.5rem; overflow:hidden; background:linear-gradient(180deg,#b9dce2 0%,#e9e8c4 72%,#f3d67a 100%); }
+    .lyric-stage:before { content:""; position:absolute; width:110%; height:260px; bottom:-90px; background:repeating-linear-gradient(87deg,transparent 0 34px,rgba(96,122,69,.55) 35px 37px),linear-gradient(#617c43,#3d582d); clip-path:polygon(0 60%,4% 47%,8% 65%,14% 40%,20% 58%,28% 37%,35% 59%,42% 42%,50% 63%,57% 44%,65% 55%,72% 33%,81% 54%,90% 39%,100% 57%,100% 100%,0 100%); transform:rotate(-1deg); }
+    .lyric-cloud { position:absolute; width:30vw; height:6vw; border-radius:100%; background:rgba(255,255,255,.64); filter:blur(9px); } .lyric-cloud.a { top:12%; right:-8%; } .lyric-cloud.b { bottom:30%; left:-10%; width:40vw; }
+    .lyrics { position:relative; z-index:2; max-width:800px; text-align:center; min-height:170px; display:grid; place-items:center; } .lyric { position:absolute; font:italic 500 clamp(2.3rem,7vw,5.2rem)/.95 var(--serif); letter-spacing:-.035em; opacity:0; transform:translateY(18px); transition:opacity 1.35s ease,transform 1.35s ease; text-shadow:0 2px 22px rgba(255,255,255,.55); } .lyric.active { opacity:1; transform:none; }
+    .little-caption { max-width:560px; text-align:center; margin:1rem auto 0; font-size:11px; line-height:1.8; letter-spacing:.12em; text-transform:uppercase; position:relative; z-index:3; }
+    .chapter { position:relative; padding:clamp(5rem,12vw,11rem) max(1.35rem,6vw); overflow:hidden; } .chapter:nth-of-type(odd) { background:var(--paper); } .chapter:nth-of-type(even) { background:#edf0e6; }
+    .chapter-inner { max-width:1180px; margin:auto; display:grid; gap:clamp(2rem,7vw,7rem); align-items:center; } .chapter.split .chapter-inner { grid-template-columns:1fr 1fr; } .chapter.reverse .chapter-inner { direction:rtl; } .chapter.reverse .chapter-inner>* { direction:ltr; }
+    .chapter-num { font:500 13px var(--serif); letter-spacing:.08em; color:var(--ochre); margin:0 0 1rem; }.chapter h2 { font:400 clamp(2.6rem,5vw,5.2rem)/.92 var(--serif); letter-spacing:-.045em; margin:0; max-width:410px; }.quote { font:400 italic clamp(1.32rem,2.1vw,1.8rem)/1.35 var(--serif); max-width:390px; margin:1.4rem 0 0; }.quote:before { content:"— "; color:var(--ochre); }
+    .photo { position:relative; background:linear-gradient(145deg,#c0d8df,#f8df9e 57%,#82955e); box-shadow:0 20px 48px rgba(38,55,70,.15); overflow:hidden; isolation:isolate; min-height:clamp(365px,54vw,655px); transform:translateY(30px) rotate(var(--tilt,0deg)); opacity:0; transition:opacity 1s ease,transform 1.15s cubic-bezier(.2,.8,.2,1); }.in-view .photo { opacity:1; transform:translateY(0) rotate(var(--tilt,0deg)); }.photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1.2s ease; }.photo.has-image img { opacity:1; }.photo:before { content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(circle at 72% 21%,rgba(255,247,199,.9),transparent 23%),linear-gradient(150deg,rgba(89,137,166,.82),rgba(246,212,116,.26)); }.photo:after { content:"Surbhi"; position:absolute; bottom:18px; left:21px; font:italic 2.1rem var(--serif); color:rgba(255,255,245,.82); text-shadow:0 1px 12px rgba(38,55,70,.4); transition:.5s; }.photo.has-image:after { opacity:0; }.photo.tall { min-height:clamp(480px,68vw,760px); }.photo.wide { min-height:clamp(300px,42vw,530px); }.photo .sunflower { position:absolute; bottom:-25px; right:6%; font-size:clamp(80px,15vw,180px); opacity:.5; filter:saturate(.9); }.photo:has(img[src]) .sunflower { display:none; }
+    .wide-layout { max-width:1210px; margin:auto; }.wide-layout .photo { --tilt:-.8deg; }.wide-layout .copy { max-width:530px; margin:clamp(2rem,7vw,6rem) auto 0; text-align:center; }.editorial { max-width:1120px; margin:auto; display:grid; grid-template-columns:1.3fr .7fr; align-items:end; gap:clamp(1.5rem,5vw,5rem); }.editorial .copy { padding-bottom:2rem; }.polaroid { background:#fbf6e9; padding:11px 11px 45px; box-shadow:0 18px 37px rgba(38,55,70,.17); }.polaroid .photo { min-height:clamp(340px,43vw,570px); box-shadow:none; }.polaroid .photo:after { bottom:12px; }.polaroid-note { margin:13px 4px 0; font:italic 1.2rem var(--serif); }
+    .small-field { padding:clamp(6rem,13vw,11rem) 1.5rem; text-align:center; background:radial-gradient(ellipse at 50% 0,#fff9dc,transparent 55%),#e9ebdd; }.small-field h2 { margin:0 auto 1.5rem; font:400 clamp(3rem,7vw,6rem)/.85 var(--serif); letter-spacing:-.06em; max-width:640px; }.things { max-width:800px; padding:0; margin:3rem auto 0; list-style:none; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:rgba(38,55,70,.18); }.things li { padding:1.4rem 1.1rem; min-height:100px; display:grid; place-items:center; background:rgba(255,248,232,.76); font:italic clamp(1.2rem,2.3vw,1.65rem)/1.1 var(--serif); }.things li:nth-child(3n) { background:#e4efd5; }
+    .finale { min-height:100svh; position:relative; display:grid; place-items:center; text-align:center; overflow:hidden; color:#fff9e9; background:linear-gradient(180deg,#8bb2d0 0%,#e9c66b 37%,#58733f 38%,#263d31 100%); }.finale:before { content:""; position:absolute; inset:auto -15% -2%; height:62%; opacity:.8; background:radial-gradient(ellipse at 10% 45%,#f5c93f 0 3%,transparent 3.4%),radial-gradient(ellipse at 20% 20%,#f4c542 0 3.5%,transparent 3.9%),radial-gradient(ellipse at 32% 53%,#f7ce4d 0 3%,transparent 3.4%),radial-gradient(ellipse at 46% 28%,#f2bf2b 0 4%,transparent 4.4%),radial-gradient(ellipse at 58% 52%,#f7d359 0 3%,transparent 3.4%),radial-gradient(ellipse at 69% 22%,#f4c542 0 4%,transparent 4.4%),radial-gradient(ellipse at 81% 51%,#f7cf48 0 3.4%,transparent 3.8%),radial-gradient(ellipse at 94% 28%,#efbc2d 0 4%,transparent 4.4%),repeating-linear-gradient(96deg,transparent 0 48px,#29452d 49px 53px); filter:blur(.25px); }.finale:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(38,55,70,0) 35%,rgba(20,43,31,.68)); }.final-copy { position:relative; z-index:2; max-width:690px; padding:5rem 1.5rem; text-shadow:0 2px 18px rgba(20,43,31,.5); }.final-copy .eyebrow { color:#fff8e8; }.final-copy h2 { margin:0; font:400 clamp(3.5rem,10vw,8rem)/.82 var(--serif); letter-spacing:-.07em; }.final-copy p { font:400 italic clamp(1.4rem,2.6vw,2rem)/1.3 var(--serif); margin:2.2rem auto; max-width:510px; }.signature { font:400 clamp(2.5rem,7vw,5rem)/.85 var(--serif); margin:3rem 0 0; }.signature small { display:block; font:500 10px var(--sans); letter-spacing:.2em; text-transform:uppercase; margin-top:12px; }
+    .petal { position:fixed; z-index:5; top:-30px; width:9px; height:15px; border-radius:90% 20% 90% 20%; background:#f4c542; opacity:.55; pointer-events:none; animation:fall linear infinite; } @keyframes fall { to { transform:translate(var(--drift),110vh) rotate(530deg); } }
+    .playing .hero-copy { animation:none; } .playing .hero h1 { text-shadow:0 0 35px rgba(255,255,240,.4); }
+    @media (max-width:700px) { .chapter.split .chapter-inner,.editorial { grid-template-columns:1fr; }.chapter.reverse .chapter-inner { direction:ltr; }.chapter .copy { order:2; }.chapter h2 { max-width:370px; }.photo { min-height:105vw; }.photo.wide { min-height:65vw; }.things { grid-template-columns:1fr; }.hero-copy { padding-bottom:8rem; }.cloud.two { top:39%; }.lyric-stage { min-height:78svh; } }
+    @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.01ms!important; }.petal { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <audio id="audio" preload="metadata"></audio>
+  <button class="music" id="musicControl" aria-label="Play music" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+
+  <header class="hero" id="top">
+    <div class="sun" aria-hidden="true"></div><div class="cloud one" aria-hidden="true"></div><div class="cloud two" aria-hidden="true"></div><div class="cloud three" aria-hidden="true"></div>
+    <div class="birds" aria-hidden="true">⌒ ⌒ ⌒</div><div class="skyline" aria-hidden="true"></div>
+    <div class="hero-copy"><p class="eyebrow">a small place made only for you</p><h1>Somewhere between one ordinary day and another…<br><em>I found you.</em></h1><button class="play-intro" id="begin"><span class="disc">▶</span><span id="beginLabel">for Surbhi — press play</span></button></div>
+    <span class="hero-note">scroll slowly ↓</span>
+  </header>
+
+  <section class="lyric-stage" aria-label="A few words with the music"><div class="lyric-cloud a"></div><div class="lyric-cloud b"></div><div class="lyrics" id="lyrics" aria-live="polite"></div><p class="little-caption">a few words, arriving one by one<br>like clouds that somehow knew where to find us</p></section>
+  <main id="memories"></main>
+  <section class="small-field"><p class="eyebrow">in all the small ways</p><h2>Little things I love about you.</h2><ul class="things" id="things"></ul></section>
+  <footer class="finale"><div class="final-copy"><p class="eyebrow">and if I had to say it simply</p><h2>you feel like home.</h2><p id="finalMessage"></p><div class="signature" id="signature"></div></div></footer>
+
+  <script>
+    /* ================================================================
+       PERSONALIZE THIS PART — replace words, paths and timing below.
+       The bundled assets are in ./assets/ beside this HTML file.
+       Keep lyric snippets short; the rest of this page is written for Surbhi.
+       ================================================================ */
+    const LOVE_LETTER = {
+      name: 'Surbhi',
+      audio: './assets/song.mp3',
+      photos: Array.from({length:13}, (_,i) => `./assets/surbhi-${String(i+1).padStart(2,'0')}.jpg`),
+      memories: [
+        { title:'the first little shift', quote:'Even before I had the words for it, something about you already felt like home.', layout:'split', tilt:'-2deg' },
+        { title:'you, in your own light', quote:'You have this way of making even the quietest moments feel worth remembering.', layout:'reverse split', tilt:'2deg' },
+        { title:'the kind of day I replay', quote:'Some memories do not need a reason. I just want to keep this one close.', layout:'wide', tilt:'-.8deg' },
+        { title:'one of my favorite views', quote:'There are a thousand ways to describe beautiful. Somehow, I still think of you first.', layout:'editorial', tilt:'1.4deg' },
+        { title:'a moment I kept', quote:'Your smile has a way of staying with me long after the moment is over.', layout:'split', tilt:'-1.2deg' },
+        { title:'softly, always', quote:'The little versions of you are the ones I love just as much.', layout:'polaroid', tilt:'2.2deg' },
+        { title:'the world, with you in it', quote:'Everything feels a little gentler in a world where you exist.', layout:'reverse split', tilt:'-2deg' },
+        { title:'the way you make me smile', quote:'You turn ordinary days into stories I want to tell forever.', layout:'wide', tilt:'.7deg' },
+        { title:'a place in time', quote:'If I could save a feeling, it would be this: knowing you are in my life.', layout:'editorial', tilt:'-1.6deg' },
+        { title:'all the versions of us', quote:'Every day, I find another reason to be grateful that our paths met.', layout:'split', tilt:'1.8deg' },
+        { title:'still my favorite', quote:'No matter how many moments pass, you will always be my favorite part of them.', layout:'polaroid', tilt:'-1deg' },
+        { title:'your sunshine', quote:'You carry a light that reaches people without ever asking for attention.', layout:'reverse split', tilt:'2deg' },
+        { title:'and then there was you', quote:'And somehow, in the middle of everything, I found my person.', layout:'wide', tilt:'-.5deg' }
+      ],
+      littleThings: ['the softness in your smile', 'the way your eyes say so much', 'every little version of you', 'how you make ordinary days feel special', 'the warmth you bring with you', 'the feeling of being understood by you'],
+      finalMessage: 'Surbhi, you are the kind of person who makes a simple day feel like something worth holding onto. I hope you always see yourself the way I see you: deeply loved, endlessly beautiful, and impossible to replace. In every season, I choose you.',
+      lyricSnippets: [
+        { at:0, text:'press play, and stay here a while' },
+        { at:13, text:'we fell in love in October' },
+        { at:30, text:'some things arrive quietly, then become everything' },
+        { at:50, text:'you are my favorite part of this world' }
+      ]
+    };
+
+    const $ = (s, root=document) => root.querySelector(s);
+    const audio = $('#audio'), control = $('#musicControl'), begin = $('#begin'), lyrics = $('#lyrics');
+    audio.src = LOVE_LETTER.audio;
+    document.title = `For ${LOVE_LETTER.name}`;
+    $('#beginLabel').textContent = `for ${LOVE_LETTER.name} — press play`;
+    $('#finalMessage').textContent = LOVE_LETTER.finalMessage;
+    $('#signature').innerHTML = `${LOVE_LETTER.name}<small>my soulmate.</small>`;
+
+    function photoMarkup(src, i, classes, tilt) {
+      return `<figure class="photo ${classes || ''}" style="--tilt:${tilt}" data-fallback aria-label="Memory ${i+1} with ${LOVE_LETTER.name}"><span class="sunflower" aria-hidden="true">🌻</span><img src="${src}" alt="A memory of ${LOVE_LETTER.name}" loading="lazy"></figure>`;
+    }
+    const memoryRoot = $('#memories');
+    LOVE_LETTER.memories.forEach((m,i) => {
+      const n = String(i+1).padStart(2,'0'), photo = photoMarkup(LOVE_LETTER.photos[i],i,m.layout==='wide'?'wide':'',m.tilt);
+      let body;
+      if(m.layout==='wide') body = `<div class="wide-layout">${photo}<div class="copy"><p class="chapter-num">memory ${n} / 13</p><h2>${m.title}</h2><p class="quote">${m.quote}</p></div></div>`;
+      else if(m.layout==='editorial') body = `<div class="editorial"><div class="copy"><p class="chapter-num">memory ${n} / 13</p><h2>${m.title}</h2><p class="quote">${m.quote}</p></div>${photo}</div>`;
+      else if(m.layout==='polaroid') body = `<div class="chapter-inner split"><div class="polaroid">${photo}<p class="polaroid-note">a moment worth keeping close.</p></div><div class="copy"><p class="chapter-num">memory ${n} / 13</p><h2>${m.title}</h2><p class="quote">${m.quote}</p></div></div>`;
+      else body = `<div class="chapter-inner ${m.layout.includes('reverse')?'':' '} "><div class="copy"><p class="chapter-num">memory ${n} / 13</p><h2>${m.title}</h2><p class="quote">${m.quote}</p></div>${photo}</div>`;
+      const sec = document.createElement('section'); sec.className=`chapter ${m.layout.includes('split')?'split':''} ${m.layout.includes('reverse')?'reverse':''}`; sec.innerHTML=body; memoryRoot.append(sec);
+    });
+    LOVE_LETTER.littleThings.forEach(t => { const li=document.createElement('li'); li.textContent=t; $('#things').append(li); });
+
+    document.querySelectorAll('.photo img').forEach(img => {
+      img.addEventListener('load', () => img.closest('.photo').classList.add('has-image'));
+      img.addEventListener('error', () => img.remove());
+    });
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }}), {threshold:.14});
+    document.querySelectorAll('.chapter').forEach(el => observer.observe(el));
+
+    LOVE_LETTER.lyricSnippets.forEach((line,i) => { const el=document.createElement('p'); el.className='lyric'; el.dataset.at=line.at; el.textContent=line.text; lyrics.append(el); });
+    const lyricEls=[...document.querySelectorAll('.lyric')];
+    function syncLyrics(){ const now=audio.currentTime; let active=0; LOVE_LETTER.lyricSnippets.forEach((l,i)=>{if(now>=l.at)active=i}); lyricEls.forEach((el,i)=>el.classList.toggle('active',i===active)); }
+    function updateUI(playing) { control.classList.toggle('is-playing',playing); control.setAttribute('aria-pressed',playing); control.setAttribute('aria-label',playing?'Pause music':'Play music'); control.firstElementChild.textContent=playing?'Ⅱ':'▶'; document.body.classList.toggle('playing',playing); }
+    async function toggleMusic(){ if(audio.paused){ try{ await audio.play(); }catch(e){ console.info('Add /assets/song.mp3 to enable music.'); } } else audio.pause(); }
+    control.addEventListener('click',toggleMusic); begin.addEventListener('click', async()=>{ await toggleMusic(); document.querySelector('.lyric-stage').scrollIntoView({behavior:'smooth'}); });
+    audio.addEventListener('play',()=>updateUI(true)); audio.addEventListener('pause',()=>updateUI(false)); audio.addEventListener('timeupdate',syncLyrics); audio.addEventListener('ended',()=>{ updateUI(false); lyricEls.forEach(el=>el.classList.remove('active')); });
+    // A few quiet drifting petals. Kept low-count for performance.
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches) for(let i=0;i<12;i++){ const p=document.createElement('i'); p.className='petal'; p.style.left=`${Math.random()*100}vw`; p.style.animationDuration=`${12+Math.random()*12}s`; p.style.animationDelay=`-${Math.random()*18}s`; p.style.setProperty('--drift',`${-13+Math.random()*26}vw`); p.style.transform=`scale(${.55+Math.random()*.75})`; document.body.append(p); }
+  </script>
+</body>
+</html>
